@@ -1,0 +1,136 @@
+site_name: PGW Knowledge & Agent Base
+site_description: คลังความรู้ + ต้นทางของ Claude Skill สำหรับ Payment Gateway (PGW) — แยกต่างหากจากโปรเจค PaymentGateway หลัก แต่เนื้อหาเกี่ยวเนื่องกัน
+theme:
+  name: material
+  language: en
+  font:
+    text: Kanit
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: สลับเป็นโหมดสว่าง
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: สลับเป็นโหมดมืด
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - attr_list
+  - md_in_html
+
+nav:
+  - หน้าแรก: index.md
+  - สารบัญค้นไว (INDEX): INDEX.md
+  - "เคสจริงจากบทสนทนา (Case Log)": case-log.md
+  - "จุดที่ข้อมูลขัดแย้งกัน (Contradictions Log)": contradictions-log.md
+  - Open Questions: open-questions.md
+  - "เงื่อนไขการขายและ Partner": pricing-partners.md
+  - "PGW API (Merchant-facing)":
+      - ภาพรวม: api/index.md
+      - Roles & Hierarchy: api/roles.md
+      - Integration Guide: api/integration-guide.md
+      - API Reference: api/reference.md
+      - Transaction Flows: api/transaction-flows.md
+      - FAQ: api/faq.md
+  - "Admin Console":
+      - ภาพรวม: console/index.md
+      - Dashboard: console/dashboard.md
+      - Company:
+          - ภาพรวม: console/company/index.md
+          - Company Users: console/company/users.md
+          - Company Roles: console/company/roles.md
+          - Fee Accounts: console/company/fee-accounts.md
+          - Ban Accounts: console/company/ban-accounts.md
+          - Internal Accounts: console/company/internal-accounts.md
+      - Seller:
+          - ภาพรวม: console/seller/index.md
+          - Sellers: console/seller/sellers.md
+          - Fee Dashboard: console/seller/fee-dashboard.md
+          - Seller MDR Templates: console/seller/mdr-templates.md
+      - Merchant:
+          - ภาพรวม: console/merchant/index.md
+          - Merchants: console/merchant/merchants.md
+          - Merchant Users: console/merchant/users.md
+          - Merchant Roles: console/merchant/roles.md
+          - Merchant Customers: console/merchant/customers.md
+          - Merchant Accounts: console/merchant/accounts.md
+      - Slip Verification: console/slip-verification.md
+      - Payment:
+          - ภาพรวม: console/payment/index.md
+          - Payment Channels: console/payment/channels.md
+          - Payment Pools: console/payment/pools.md
+          - Transactions: console/payment/transactions.md
+          - Callback Logs: console/payment/callback-logs.md
+          - Payment Config: console/payment/config.md
+      - "Deep-dive: Match Type": console/match-type.md
+  - "OpsDash":
+      - ภาพรวม: opsdash/index.md
+      - Dashboard: opsdash/dashboard.md
+      - Client: opsdash/clients.md
+      - Bank Account: opsdash/bank-accounts.md
+      - Onboard: opsdash/onboard.md
+      - "SOP: ผูกบัญชีธนาคารใหม่": opsdash/bank-onboarding-sop.md
+      - Bot: opsdash/bots.md
+      - Job: opsdash/jobs.md
+      - Transaction: opsdash/transactions.md
+      - Company: opsdash/company.md
+  - "Watchtower":
+      - ภาพรวม: watchtower/index.md
+      - Dashboard: watchtower/dashboard.md
+      - Accounts: watchtower/accounts.md
+      - Transactions: watchtower/transactions.md
+      - Direct Sync: watchtower/direct-sync.md
+      - Jobs: watchtower/jobs.md
+      - Flow: watchtower/flow.md
+      - Reports: watchtower/reports.md
+      - Groups: watchtower/groups.md
+      - Notifications: watchtower/notifications.md
+  - "PGWay (Device Monitoring)":
+      - ภาพรวม: pgway/index.md
+      - Dashboard: pgway/dashboard.md
+      - Devices: pgway/devices.md
+      - Test Logs: pgway/test-logs.md
+      - Balance Checks: pgway/balance-checks.md
+      - Phone Status: pgway/phone-status.md
+      - Agent Devices: pgway/agent-devices.md
+      - Admin: pgway/admin.md
+  - "ทีม Support":
+      - ภาพรวม: support/index.md
+      - เคสที่พบบ่อย: support/common-cases.md
+      - "Playbook แก้ปัญหา": support/case-playbooks.md
+      - Transaction Status Reference: support/status-reference.md
+      - ลิงก์ที่เกี่ยวข้อง: support/related-links.md
+      - "Team Operations (คน/องค์กร/กระบวนการ)": support/team-operations.md
+  - ดาวน์โหลด PDF: downloads.md
+
+extra:
+  generator: false
